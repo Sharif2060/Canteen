@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Canteen Menu</title>
+    <title>Ramanujan College Canteen Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,88 +15,163 @@
         <section class="category">
             <h2>Beverages</h2>
             <ul>
-                <li>Tea - ₹10</li>
-                <li>Coffee - ₹15</li>
-                <li>Soft Drink - ₹20</li>
-                <li>Juice - ₹30</li>
-                <li>Lassi - ₹30</li>
-                <li>Iced Tea - ₹30</li>
-                <li>Jaljeera - M.R.P</li>
-                <li>Flavoured Milk - M.R.P</li>
-                <li>Lemon Drink - M.R.P</li>
-                <li>Mineral Water - M.R.P</li>
-
+                <li>
+                    <div class="menu-item">
+                        <span>Tea - ₹10</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('tea', 10, 'decrease')">-</button>
+                            <span id="tea-quantity">0</span>
+                            <button onclick="updateQuantity('tea', 10, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Coffee - ₹15</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('coffee', 15, 'decrease')">-</button>
+                            <span id="coffee-quantity">0</span>
+                            <button onclick="updateQuantity('coffee', 15, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Soft Drink - ₹20</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('soft-drink', 20, 'decrease')">-</button>
+                            <span id="soft-drink-quantity">0</span>
+                            <button onclick="updateQuantity('soft-drink', 20, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Lassi - ₹20</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Lassi', 20, 'decrease')">-</button>
+                            <span id="Lassi-quantity">0</span>
+                            <button onclick="updateQuantity('Lassi', 20, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add similar structures for other items -->
             </ul>
         </section>
 
         <section class="category">
-            <h2>Snacks</h2>
+            <h2>Snakes</h2>
             <ul>
-                <li>Samosa - ₹10</li>
-                <li>Paneer Bread Pakoda - ₹20</li>
-                <li>Burger - ₹25</li>
-                <li>Hot Dog - ₹40</li>
-                <li>Maggi - ₹25</li>
-                <li>Egg Maggi - ₹25</li>
-                <li>French Fries - ₹30</li>
-                <li>Paneer Kulcha - ₹50</li>
-            </ul>
-        </section>
-
-        <section class="category">
-            <h2>Sandwich & More</h2>
-            <ul>
-                <li>Veg Sandwich - ₹30</li>
-                <li>Egg Sandwich - ₹40</li>
-                <li>Cheese Sandwich - ₹30</li>
-                <li>Club Sandwich - ₹40</li>
-                <li>Paneer Grill Sandwich - ₹50</li>
-                <li>Veg Grill Sandwich - ₹30</li>
-                <li>Egg Grill Sandwich - ₹35</li>
+                <li>
+                    <div class="menu-item">
+                        <span>Samosa - ₹20</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Samosa', 20, 'decrease')">-</button>
+                            <span id="Samosa-quantity">0</span>
+                            <button onclick="updateQuantity('Samosa', 20, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Bread Pakoda - ₹15</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Bread Pakoda', 15, 'decrease')">-</button>
+                            <span id="Bread Pakoda-quantity">0</span>
+                            <button onclick="updateQuantity('Bread Pakoda', 15, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Burger - ₹20</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Burger', 20, 'decrease')">-</button>
+                            <span id="Burger-quantity">0</span>
+                            <button onclick="updateQuantity('Burger', 20, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Maggi - ₹20</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Maggi', 20, 'decrease')">-</button>
+                            <span id="Maggi-quantity">0</span>
+                            <button onclick="updateQuantity('Maggi', 20, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add similar structures for other items -->
             </ul>
         </section>
 
         <section class="category">
             <h2>Chinese Plate</h2>
             <ul>
-                <li>Chowmein - ₹40</li>
-                <li>Egg Chowmein - ₹50</li>
-                <li>Chowmein - ₹40</li>
+                <li>
+                    <div class="menu-item">
+                        <span>Chowmein - ₹40</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Chowmein', 40, 'decrease')">-</button>
+                            <span id="Chowmein-quantity">0</span>
+                            <button onclick="updateQuantity('Chowmein', 40, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Momos - ₹25</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Momos', 25, 'decrease')">-</button>
+                            <span id="Momos-quantity">0</span>
+                            <button onclick="updateQuantity('Momos', 25, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Egg Chowmein - ₹40</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Egg Chowmein', 40, 'decrease')">-</button>
+                            <span id="Egg Chowmein-quantity">0</span>
+                            <button onclick="updateQuantity('Egg Chowmein', 40, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="menu-item">
+                        <span>Spring Roll - ₹30</span>
+                        <div class="quantity-controls">
+                            <button onclick="updateQuantity('Spring Roll', 30, 'decrease')">-</button>
+                            <span id="Spring Roll-quantity">0</span>
+                            <button onclick="updateQuantity('Spring Roll', 30, 'increase')">+</button>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add similar structures for other items -->
             </ul>
         </section>
 
-        <section class="category">
-            <h2>Special Items</h2>
-            <ul>
-                <li>Special Thali - $6</li>
-                <li>Festival Sweets - $3</li>
-            </ul>
+        <!-- Repeat similar structure for other categories -->
+
+        <section id="total-amount-section">
+            <h2>Total Amount to Pay: ₹<span id="total-amount">0</span></h2>
         </section>
 
-        <section class="category">
-            <h2>Healthy Options</h2>
-            <ul>
-                <li>Salad - $3</li>
-                <li>Fruit Bowl - $2.5</li>
-                <li>Smoothie - $3.5</li>
-            </ul>
+        <section id="pay-now-section">
+            <button id="pay-now-button">Pay Now</button>
         </section>
+        
 
-        <section class="category">
-            <h2>Miscellaneous</h2>
-            <ul>
-                <li>Chips - $1.5</li>
-                <li>Biscuits - $1</li>
-            </ul>
-        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 College Canteen. All rights reserved.</p>
-        <b></b>
         <p>@Sharif Alam</p>
-        <b></b>
         <p>Department of Computer Science</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
