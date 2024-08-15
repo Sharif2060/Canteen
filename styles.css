@@ -8,18 +8,18 @@ body {
 header {
     background-color: #343a40;
     color: #fff;
-    padding: 10px 0;
     text-align: center;
+    padding: 10px 0;
 }
 
-h1 {
+h1 { 
     margin: 0;
     font-size: 2.5em;
 }
 
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width:800;
     margin: auto;
 }
 
@@ -27,8 +27,15 @@ main {
     background-color: #fff;
     margin-bottom: 20px;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .category h2 {
@@ -38,16 +45,91 @@ main {
     border-bottom: 2px solid #007bff;
     padding-bottom: 10px;
 }
-
 ul {
     list-style-type: none;
     padding: 0;
 }
 
-li {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
 }
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.quantity-controls span {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+#total-amount-section {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pay-now-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#pay-now-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pay-now-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+body, .message {
+    outline: none;
+    border: none;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.message h2, .message p {
+    text-decoration: none;
+    color: #333; /* Ensures no underline or other unwanted style */
+}
+
+h2:focus, p:focus {
+    outline: none; /* Removes focus outline if any */
+}
+
+
 
 footer {
     text-align: center;
