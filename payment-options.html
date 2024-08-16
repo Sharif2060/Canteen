@@ -71,17 +71,20 @@
     <script>
         function redirectToUPI(app) {
             let upiLink;
-            
+            const phoneNumber = "9354401592"; // Your phone number linked to UPI
+    
+            // Set UPI ID based on the app
             if (app === 'phonepe') {
-                upiLink = "upi://pay?pa=9354401592@ybl&pn=Canteen%20Name&am=0&cu=INR";
+                upiLink = `upi://pay?pa=${phoneNumber}@ybl&pn=Canteen%20Name&am=0&cu=INR`;
             } else if (app === 'googlepay') {
-                upiLink = "upi://pay?pa=9354401592@okhdfc&pn=Canteen%20Name&am=0&cu=INR";
+                upiLink = `upi://pay?pa=${phoneNumber}@okhdfc&pn=Canteen%20Name&am=0&cu=INR`;
             }
-            
+    
             // Redirect to the UPI link
             window.location.href = upiLink;
         }
     </script>
+    
     
     
 
