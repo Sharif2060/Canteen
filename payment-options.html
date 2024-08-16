@@ -63,29 +63,29 @@
 <body>
 
     <div class="container">
-        <h1>Select Your Payment Method</h1>
-        <button class="payment-option phonepe" onclick="redirectToUPI('phonepe')">Pay with PhonePe</button>
-        <button class="payment-option googlepay" onclick="redirectToUPI('googlepay')">Pay with Google Pay</button>
-    </div>
-    
-    <script>
-        function redirectToUPI(app) {
-            let upiLink;
-            const phoneNumber = "9354401592"; // Your phone number linked to UPI
-            const payeeName = "Canteen Name"; // Replace with actual canteen name
-            const amount = 0; // Set to 0 to let the user enter the amount
-    
-            if (app === 'phonepe') {
-                upiLink = `upi://pay?pa=${phoneNumber}@ybl&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
-            } else if (app === 'googlepay') {
-                upiLink = `upi://pay?pa=${phoneNumber}@okhdfc&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
-            }
-    
-            // Attempt to redirect
-            window.location.href = upiLink;
+    <h1>Select Your Payment Method</h1>
+    <button class="payment-option phonepe" onclick="redirectToUPI('phonepe')">Pay with PhonePe</button>
+    <button class="payment-option googlepay" onclick="redirectToUPI('googlepay')">Pay with Google Pay</button>
+</div>
+
+<script>
+    function redirectToUPI(app) {
+        let upiLink;
+        const phoneNumber = "9354401592"; // Your phone number linked to UPI
+        const payeeName = "Canteen Name"; // Replace with actual canteen name
+        const amount = 0; // Set to 0 to let the user enter the amount
+
+        if (app === 'phonepe') {
+            upiLink = `upi://pay?pa=${phoneNumber}@ybl&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
+        } else if (app === 'googlepay') {
+            upiLink = `upi://pay?pa=${phoneNumber}@okhdfc&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
         }
-    </script>
-    
+
+        // Attempt to redirect
+        window.location.href = upiLink;
+    }
+</script>
+
     
     
     
