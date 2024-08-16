@@ -72,18 +72,20 @@
         function redirectToUPI(app) {
             let upiLink;
             const phoneNumber = "9354401592"; // Your phone number linked to UPI
+            const payeeName = "Canteen Name"; // Replace with actual canteen name
+            const amount = 0; // Set to 0 to let the user enter the amount
     
-            // Set UPI ID based on the app
             if (app === 'phonepe') {
-                upiLink = `upi://pay?pa=${phoneNumber}@ybl&pn=Canteen%20Name&am=0&cu=INR`;
+                upiLink = `upi://pay?pa=${phoneNumber}@ybl&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
             } else if (app === 'googlepay') {
-                upiLink = `upi://pay?pa=${phoneNumber}@okhdfc&pn=Canteen%20Name&am=0&cu=INR`;
+                upiLink = `upi://pay?pa=${phoneNumber}@okhdfc&pn=${encodeURIComponent(payeeName)}&am=${amount}&cu=INR`;
             }
     
-            // Redirect to the UPI link
+            // Attempt to redirect
             window.location.href = upiLink;
         }
     </script>
+    
     
     
     
