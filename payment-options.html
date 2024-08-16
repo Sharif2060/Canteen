@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Payment Method</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ece9e6, #ffffff);
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .payment-option {
+            margin: 10px;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .payment-option:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .phonepe {
+            background-color: #5e35b1;
+            color: white;
+        }
+        .phonepe:hover {
+            background-color: #7c4dff;
+        }
+        .googlepay {
+            background-color: #4285f4;
+            color: white;
+        }
+        .googlepay:hover {
+            background-color: #5a95f6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Select Your Payment Method</h1>
+        <button class="payment-option phonepe" onclick="redirectToUPI('phonepe')">Pay with PhonePe</button>
+        <button class="payment-option googlepay" onclick="redirectToUPI('googlepay')">Pay with Google Pay</button>
+    </div>
+    
+    <script>
+        function redirectToUPI(app) {
+            let upiLink;
+            
+            if (app === 'phonepe') {
+                upiLink = "upi://pay?pa=9354401592@ybl&pn=Canteen%20Name&am=0&cu=INR";
+            } else if (app === 'googlepay') {
+                upiLink = "upi://pay?pa=9354401592@okhdfc&pn=Canteen%20Name&am=0&cu=INR";
+            }
+            
+            // Redirect to the UPI link
+            window.location.href = upiLink;
+        }
+    </script>
+    
+    
+
+</body>
+</html>
